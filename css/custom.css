@@ -503,3 +503,11 @@ hr.custom-hr:before {
     color: #fff;
     background-color: var(#c688f9);
 }
+
+svg.icon {
+    width: 1.28em;
+    height: 1.28em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
