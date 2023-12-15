@@ -394,11 +394,13 @@ h6::before {
     -o-transform: scale(0.5);
 }
 
-.search-dialog hr {
+.search-dialog hr,
+hr.custom-hr {
     border: 2px dashed #49b1f5 !important;
 }
 
-.search-dialog hr:before {
+.search-dialog hr:before,
+hr.custom-hr:before {
     color: #49b1f5 !important;
     position: absolute;
     top: -10px;
