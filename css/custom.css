@@ -393,3 +393,111 @@ h6::before {
     -ms-transform: scale(0.5);
     -o-transform: scale(0.5);
 }
+
+.search-dialog hr {
+    border: 2px dashed #49b1f5 !important;
+}
+
+.search-dialog hr:before {
+    color: #49b1f5 !important;
+    position: absolute;
+    top: -10px;
+    left: 5%;
+    z-index: 1;
+    content: '\f2dc';
+    font-size: 20px;
+    line-height: 1;
+    transition: all 1s ease-in-out;
+    display: inline-block;
+    font-weight: 600;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+#content-inner.layout h1:hover,
+#content-inner.layout h2:hover,
+#content-inner.layout h3:hover,
+#content-inner.layout h4:hover,
+#content-inner.layout h5:hover,
+#content-inner.layout h6:hover {
+    color: #49b1f5 !important;
+}
+
+/* 全局宽度 */
+.layout {
+    max-width: 1400px;
+}
+
+/* 侧边卡片栏宽度 */
+.aside-content {
+    max-width: 318px;
+    min-width: 300px;
+}
+
+/* 平板尺寸自适应(不启用侧边栏宽度限制) */
+@media screen and (max-width: 900px) {
+    .aside-content {
+        max-width: none !important;
+        padding: 0 5px 0 5px;
+    }
+}
+
+/* 除了首页以外其他页面隐藏卡片，并采用宽屏显示 */
+#archive,
+#page,
+#category,
+#tag {
+    width: 100%;
+}
+
+#archive,
+#page,
+#category,
+#tag {
+    width: 100%;
+}
+
+.page:not(.page.home) .aside-content {
+    display: none;
+}
+
+.post .card-info,
+.post .card-announcement,
+.post .card-recent-post,
+.post .toc-percentage {
+    display: none;
+}
+
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, 0.2);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(#c688f9);
+    background-image: -webkit-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.4) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0.4) 75%,
+            transparent 75%,
+            transparent);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: var(#c688f9);
+}
