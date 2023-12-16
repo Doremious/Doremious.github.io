@@ -4325,6 +4325,10 @@ h1.page-title + .tag-cloud-list {
   -ms-animation: flashlight 1s linear infinite alternate;
   animation: flashlight 1s linear infinite alternate;
 }
+[data-theme="dark"] #post .post-copyright:hover {
+  -webkit-box-shadow: 0 0 5px #00c4b6;
+  box-shadow: 0 0 5px #00c4b6;
+}
 [data-theme="dark"] .post-copyright-info {
   color: #e0e0e4;
 }

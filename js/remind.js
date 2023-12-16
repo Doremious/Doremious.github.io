@@ -4,7 +4,7 @@ document.addEventListener("copy", function () {
         data: function () {
             this.$notify({
                 title: "🌸诶嘿嘿，复制成功",
-                message: "若要转载最好保留原文链接哦~",
+                message: "若要转载最好标注原文链接哦~",
                 position: 'top-left',
                 offset: 50,
                 showClose: true,
@@ -21,7 +21,7 @@ document.onkeydown = function (e) {
             data: function () {
                 this.$notify({
                     title: "❄️尼、嘻、嘻——发现你喽~",
-                    message: "扒源要遵循GPL协议呦！",
+                    message: "扒源要遵循 GPL 协议呦！",
                     position: 'top-left',
                     offset: 50,
                     showClose: true,
