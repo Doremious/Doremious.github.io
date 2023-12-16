@@ -309,7 +309,7 @@ h6::before {
 }
 
 #content-inner.layout h3::before {
-    color: #ffbf00;
+    color: #c688f9;
     margin-left: -1.22rem;
     font-size: 0.95rem;
     margin-top: -0.09rem;
@@ -510,4 +510,16 @@ svg.icon {
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+}
+
+figure {
+    /*图注CSS样式根据需要修改*/
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--font-color);
+    text-align: center;
+}
+
+figure::before {
+    content: '- ';
 }
