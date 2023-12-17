@@ -76,12 +76,11 @@ function getRandom(option) {
             ret = Math.random() * 4;
             break;
         case "fnx":
-            random = Math.random()
+            random = Math.random() * 0.5
             if (Math.random() > 0.2) {
-                random *= 0.5
                 random += 0.3;
             } else {
-                random += 0.5
+                random += 1
             }
             ret = function (x, y) {
                 return x + random
