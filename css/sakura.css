@@ -1,4 +1,4 @@
-#sakura {
+#canvas_sakura {
     position: fixed;
     left: 0;
     top: 0;
@@ -7,6 +7,6 @@
     z-index: -1;
 }
 
-[data-theme="dark"] #sakura {
+[data-theme="dark"] #canvas_sakura {
     display: none;
 }
