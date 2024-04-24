@@ -8398,11 +8398,11 @@ li.categoryBar-list-item {
 }
 
 /* 星空手机模式消失 */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #universe {
     display: none !important;
   }
-}
+} */
 
 /* 星空白天模式消失 */
 [data-theme="light"] #universe {
@@ -9213,12 +9213,12 @@ figure {
   font-weight: bold;
 }
 
-.error404 #error-wrap .error-content .error-info .error_title {
-  font-size: 5em;
-}
-
-[data-theme="dark"] .error404 #error-wrap .error-content .error-info .error_title {
-  animation: light_15px 10s linear infinite;
+/* 404框 */
+.error404 #error-wrap .error-content {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border: var(--border-style);
+  border-radius: 20px;
 }
 
 [data-theme="dark"] .error404 #error-wrap .error-content {
@@ -9226,6 +9226,10 @@ figure {
   backdrop-filter: none;
   border: none !important;
   box-shadow: 0 0 5px #c0c0c0;
+}
+
+[data-theme="dark"] .error404 #error-wrap .error-content .error-info .error_title {
+  animation: light_15px 10s linear infinite;
 }
 .search-dialog {
   position: fixed;

@@ -2300,7 +2300,6 @@ if (localStorage.getItem("reset_4") == undefined) {
 // 清除localStorage配置项
 function clearItem() {
   localStorage.removeItem('blogbg');
-  localStorage.removeItem('universe');
   localStorage.removeItem('blur');
   localStorage.removeItem('fpson');
   localStorage.removeItem('transNum');
@@ -2361,23 +2360,6 @@ function setColor(c) {
   document.documentElement.style.setProperty("--high-trans-color", high_trans_color);
 }
 
-
-// 星空背景开关
-if (localStorage.getItem("universe") == undefined) {
-  localStorage.setItem("universe", "block");
-}
-setUniverse2(localStorage.getItem("universe"));
-function setUniverse2(c) {
-  document.getElementById("universe").style.display = c;
-  localStorage.setItem("universe", c);
-}
-function setUniverse() {
-  if (document.getElementById("universeSet").checked) {
-    setUniverse2("block");
-  } else {
-    setUniverse2("none");
-  }
-}
 
 // 雪花开关
 if (localStorage.getItem("snow") == undefined) {
@@ -2656,12 +2638,6 @@ function createWinbox() {
   <p class="rang_width" id="rang_blur" style="width:${miniBlur}%"></p>
 </div>
 
-
-<div class="content" style="display:flex">
-  <div class="content-text" style="font-weight:bold; padding-left:10px"> 星空特效 (夜间模式) </div><input type="checkbox" id="universeSet" onclick="setUniverse()">
-  <div class="content-text" style="font-weight:bold; padding-left:20px"> 霓虹灯 (夜间模式) </div><input type="checkbox" id="lightSet" onclick="setLight()">
-</div>
-
 <div class="content" style="display:flex">
   <div class="content-text" style="font-weight:bold; padding-left:10px"> 模糊效果 (消耗性能) </div><input type="checkbox" id="blur" onclick="setBlur()">
   <div class="content-text" style="font-weight:bold; padding-left:20px"> 侧边栏 (默认开) </div><input type="checkbox" id="rightSideSet" onclick="toggleRightside()">
@@ -2783,11 +2759,6 @@ function createWinbox() {
     document.getElementById("blur").checked = true;
   } else {
     document.getElementById("blur").checked = false;
-  }
-  if (localStorage.getItem("universe") == "block") {
-    document.getElementById("universeSet").checked = true;
-  } else if (localStorage.getItem("universe") == "none") {
-    document.getElementById("universeSet").checked = false;
   }
   if (localStorage.getItem("fpson") == "1") {
     document.getElementById("fpson").checked = true;
