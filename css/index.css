@@ -8819,11 +8819,6 @@ i.fas.fa-cog.right_side {
   position: relative;
 }
 
-/* 波浪黑夜模式隐藏 */
-.main-hero-waves-area {
-  display: none;
-}
-
 /* 图片圆角和边框 */
 .post-content img,
 #article-container:has(.fj-gallery, #gitZone, .about_page) img {
@@ -9216,6 +9211,21 @@ figure {
 
 .sticky_layout .card-recent-post>div.item-headline span {
   font-weight: bold;
+}
+
+.error404 #error-wrap .error-content .error-info .error_title {
+  font-size: 5em;
+}
+
+[data-theme="dark"] .error404 #error-wrap .error-content .error-info .error_title {
+  animation: light_15px 10s linear infinite;
+}
+
+[data-theme="dark"] .error404 #error-wrap .error-content {
+  background: var(--trans-dark);
+  backdrop-filter: none;
+  border: none !important;
+  box-shadow: 0 0 5px #c0c0c0;
 }
 .search-dialog {
   position: fixed;
