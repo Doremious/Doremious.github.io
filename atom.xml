@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Doremious</title>
+  <title>Doremy</title>
   
   
   <link href="https://doremy.cn/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://doremy.cn/</id>
   
   <author>
-    <name>Doremious</name>
+    <name>Doremy</name>
     
   </author>
   

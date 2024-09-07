@@ -6644,15 +6644,16 @@ div#archive {
   max-height: 250px !important;
 }
 
-.OwO .OwO-body .OwO-items-image .OwO-item {
-  max-width: calc(9% - 10px);
+.OwO .OwO-body .OwO-items-image .OwO-item[title|="Menhera"] {
+  width: calc(23% - 10px) !important;
   box-sizing: content-box;
 }
 
+.OwO .OwO-body .OwO-items-image .OwO-item[title|="QQ"],
 .OwO .OwO-body .OwO-items-image .OwO-item[title|="Heybox"],
 .OwO .OwO-body .OwO-items-image .OwO-item[title|="Tieba"],
 .OwO .OwO-body .OwO-items-show .OwO-item[title*="bilibili"] {
-  max-width: calc(7% - 10px) !important;
+  max-width: calc(5% - 10px) !important;
   box-sizing: content-box;
 }
 
@@ -6670,11 +6671,16 @@ div#archive {
 .tk-comment .tk-owo-emotion[alt*="Tsuri"],
 .tk-comment .vemoji[alt|="Yurui"],
 .tk-comment .tk-owo-emotion[alt*="Yurui"] {
-  max-width: 120px !important;
-  max-height: 120px !important;
+  max-width: 200px !important;
+  max-height: 200px !important;
   width: 120px;
   margin: 8px 1px;
   display: block !important;
+}
+
+.tk-comment .vemoji[alt|="Menhera"],
+.tk-comment .tk-owo-emotion[alt*="Menhera"]{
+  width: 240px !important;
 }
 
 /* 手机端适配 */
@@ -6700,6 +6706,7 @@ div#archive {
   .OwO .OwO-body .OwO-items-image .OwO-item[title*="Tsuri"],
   .OwO .OwO-body .OwO-items-image .OwO-item[title*="Yurui"] {
     max-width: calc(33% - 10px);
+    width: calc(33% - 10px) !important;
     box-sizing: border-box;
   }
 
@@ -6748,8 +6755,8 @@ div#archive {
 .tk-content {
   /* linear-gradient(to bottom, #2193b0, #6dd5ed); */
   background: linear-gradient(to top,
-      #4568dc,
-      #b06ab3);
+  #43cea2,
+  #185a9d);
   /*默认模式访客气泡配色*/
   padding: 10px;
   color: #fff;
@@ -6794,11 +6801,9 @@ div#archive {
 }
 
 .tk-master .tk-content {
-  background: linear-gradient(to top,
-      #43cea2,
-      #185a9d);
+  background: linear-gradient(to top, hsl(341, 100%, 90%) 0, hsl(195, 100%, 60%) 93%);
   /*默认模式博主气泡配色*/
-  color: #fff;
+  color: black;
   /*默认模式博主气泡字体配色*/
   width: fit-content;
   max-width: 100%;
@@ -6834,21 +6839,23 @@ div#archive {
 
 /* 夜间模式配色，具体比照上方默认模式class */
 [data-theme="dark"] .tk-content {
-  background: #000;
+  background: transparent;
   color: #fff;
+  box-shadow: 0 0 10px #c0c0c0;
 }
 
 [data-theme="dark"] .tk-content a {
   color: #dfa036;
 }
 
-[data-theme="dark"] .tk-content::before {
-  border-right: 15px solid #000;
+[data-theme="dark"] .tk-content::before{
+  display: none;
 }
 
 [data-theme="dark"] .tk-master .tk-content {
-  background: #000;
+  background: transparent;
   color: #fff;
+  box-shadow: 0 0 10px #c0c0c0;
 }
 
 [data-theme="dark"] .tk-master .tk-content a {
@@ -6856,10 +6863,7 @@ div#archive {
 }
 
 [data-theme="dark"] .tk-master .tk-content::before {
-  border-top: 2px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 15px solid #000;
-  border-left: 0px solid transparent;
+  display: none;
 }
 
 /* 自适应内容 */
@@ -9456,6 +9460,18 @@ div#translateRightmenu {
 
 #article-container psw:hover a:hover{
   color: #fefefe !important;
+}
+
+#post-bgm {
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  width: 300px; /* 控制播放器宽度 */
+  padding: 10px;
+}
+
+#post-bgm audio {
+  width: 100%;
 }
 .search-dialog {
   position: fixed;
