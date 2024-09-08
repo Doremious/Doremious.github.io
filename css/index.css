@@ -8918,7 +8918,8 @@ figure.highlight pre .deletion {
 /* 霓虹灯css实现 light_15px 10s linear infinite */
 [data-theme="dark"] #site-name,
 [data-theme="dark"] #site-title,
-[data-theme="dark"] #page-header.nav-fixed #nav a {
+[data-theme="dark"] #page-header.nav-fixed #nav a,
+[data-theme="dark"] #aside-content .card-info .author-info__name {
   animation: light_15px 10s linear infinite;
 }
 
